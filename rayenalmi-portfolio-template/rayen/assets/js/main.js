@@ -214,7 +214,7 @@
         email = $.trim(email);
         msg = $.trim(msg);
 
-        if (name != '' && email != '' && msg != '') {
+        /*if (name != '' && email != '' && msg != '') {
           var values = "name=" + name +
             "&subject=" + subject +
             "&phone=" + phone +
@@ -239,7 +239,7 @@
           });
         } else {
           $('#st-alert').fadeIn().html('<div class="alert alert-danger"><strong>Warning!</strong> All fields are required.</div>');
-        }
+        }*/
         return false;
       });
     }
