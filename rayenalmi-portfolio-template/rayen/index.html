@@ -2,15 +2,15 @@
 <html class="no-js" lang="en">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TJVL2DVWYQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJVL2DVWYQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-TJVL2DVWYQ');
-</script>
+    gtag('config', 'G-TJVL2DVWYQ');
+  </script>
 
 
   <!-- Meta Tags -->
@@ -29,6 +29,58 @@
   <link rel="stylesheet" href="assets/css/lightgallery.min.css" />
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .st-portfolio-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hover-message {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      display: none;
+      z-index: 10;
+    }
+
+    .st-portfolio-item:hover .hover-message {
+      display: block;
+    }
+
+    .st-overlay {
+      position: relative;
+      bottom: 100;
+      width: 86%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      /* Semi-transparent black background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      opacity: 1;
+      /* Always visible */
+    }
+
+
+    .st-portfolio-item:hover .st-overlay {
+      opacity: 1;
+      /* Make overlay visible on hover */
+    }
+
+    .st-overlay h5 {
+      color: #fff;
+      font-size: 18px;
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body id="home" class="st-get-sidebar">
@@ -440,6 +492,7 @@
                   <li>JavaScript (Node.js, React, Express)</li>
                   <li>Python (Flask)</li>
                   <li>C# (Unity)</li>
+                  <li>Blueprints Unreal Engine</li>
                   <li>Java (Spring Boot)</li>
                   <li>Solidity (for blockchain development)</li>
                 </ul>
@@ -627,7 +680,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
+            <div class="st-portfolio-item" style="position: relative;">
               <a href="assets/demo/ecoinfitltrators.png" class="st-portfolio st-zoom st-lightbox-item">
                 <div class="st-portfolio-img st-zoom-in">
                   <a href="https://drive.google.com/file/d/1orV9mrE-x7awgEfIgo6hBblhtRabBbMY/view" target="_blank">
@@ -635,9 +688,12 @@
                       style="width:300px; height: 370px; ">
                   </a>
                 </div>
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-plus-circle"></i>
+                <div class="st-overlay">
                   <h5>Game Multiplayer</h5>
+                </div>
+                <!-- Hidden message -->
+                <div class="hover-message">
+                   Demo Game Multiplayer
                 </div>
               </a>
             </div>
@@ -645,16 +701,40 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
+            <div class="st-portfolio-item" style="position: relative;">
+              <a href="assets/demo/SeoWonders.png" class="st-portfolio st-zoom st-lightbox-item">
+                <div class="st-portfolio-img st-zoom-in">
+                  <a href="https://drive.google.com/file/d/1orV9mrE-x7awgEfIgo6hBblhtRabBbMY/view" target="_blank">
+                    <img src="assets/demo/SeoWonders.png" alt="Video Thumbnail"
+                      style="width:300px; height: 370px; ">
+                  </a>
+                </div>
+                <div class="st-overlay">
+                  <h5>Sea Simulation</h5>
+                </div>
+                <!-- Hidden message -->
+                <div class="hover-message">
+                  Demo Sea Simulation
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item" style="position: relative;">
               <a href="assets/demo/VR.png" class="st-portfolio st-zoom st-lightbox-item">
                 <div class="st-portfolio-img st-zoom-in">
                   <a href="https://drive.google.com/file/d/1R-Hps1yCbfODzOj0HFRdMkXYikIJ7cAP/view" target="_blank">
-                    <img src="assets/demo/VR.png" alt="Video Thumbnail" style="width:300px; height: 370px; ">
+                    <img src="assets/demo/VR.png" alt="Video Thumbnail" style="width:300px; height: 370px;">
                   </a>
                 </div>
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-plus-circle"></i>
+                <div class="st-overlay">
                   <h5>VR Chemistry Lab</h5>
+                </div>
+                <!-- Hidden message -->
+                <div class="hover-message">
+                  Demo VR Chemistry Lab!
                 </div>
               </a>
             </div>
@@ -662,50 +742,19 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
+            <div class="st-portfolio-item" style="position: relative;">
               <a href="assets/demo/2.5D.png" class="st-portfolio st-zoom st-lightbox-item">
                 <div class="st-portfolio-img st-zoom-in">
                   <a href="https://drive.google.com/file/d/1Rp0cNPyflt8pwWOQHWPYCGXnsJZExtji/view" target="_blank">
                     <img src="assets/demo/2.5D.png" alt="Video Thumbnail" style="width:300px; height: 370px; ">
                   </a>
                 </div>
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-plus-circle"></i>
+                <div class="st-overlay">
                   <h5>2.5D Game</h5>
                 </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="assets/demo/Markily.png" class="st-portfolio st-zoom st-lightbox-item">
-                <div class="st-portfolio-img st-zoom-in">
-                  <a href="https://drive.google.com/file/d/1ITJKBJfT0TiXo6uGIRbtbD2MiMe5AAOs/view" target="_blank">
-                    <img src="assets/demo/Markily.png" alt="Video Thumbnail" style="width:300px; height: 370px; ">
-                  </a>
-                </div>
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-plus-circle"></i>
-                  <h5>Mobile Game : Markily </h5>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="assets/img/portfolio/portfolio1_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-plus-circle"></i>
-                  <h5>Mobile App : VCALL </h5>
-                </div>
-                <div class="st-portfolio-img st-zoom-in">
-                  <a href="https://drive.google.com/file/d/1NaIGZax250yuvYh7Rkd0XeqEZDzvDFZ_/view" target="_blank">
-                    <img src="assets/demo/vcall.png" alt="Video Thumbnail" style="width:300px; height: 370px; ">
-                  </a>
+                <!-- Hidden message -->
+                <div class="hover-message">
+                  Demo 2.5D Game
                 </div>
 
               </a>
@@ -714,17 +763,19 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="assets/demo/nogoal.png" class="st-portfolio st-zoom st-lightbox-item">
+            <div class="st-portfolio-item" style="position: relative;">
+              <a href="assets/demo/Markily.png" class="st-portfolio st-zoom st-lightbox-item">
                 <div class="st-portfolio-img st-zoom-in">
-                  <a href="https://drive.google.com/file/d/1IHtVIjPGZhe4acu1WkH2krOV2VYW7Tje/view" target="_blank">
-                    <img src="assets/demo/nogoal.png" alt="Video Thumbnail" style="width:300px; height: 370px; ">
+                  <a href="https://drive.google.com/file/d/1ITJKBJfT0TiXo6uGIRbtbD2MiMe5AAOs/view" target="_blank">
+                    <img src="assets/demo/Markily.png" alt="Video Thumbnail" style="width:300px; height: 370px; ">
                   </a>
                 </div>
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-plus-circle"></i>
-                  <h5>2D Game subways</h5>
-                  <p>Design / Marketing</p>
+                <div class="st-overlay">
+                  <h5>Mobile Game : Markily </h5>
+                </div>
+                <!-- Hidden message -->
+                <div class="hover-message">
+                   Demo Mobile Game : Markily
                 </div>
               </a>
             </div>
@@ -732,18 +783,64 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
+            <div class="st-portfolio-item" style="position: relative;">
+              <a href="assets/img/portfolio/portfolio1_lg.jpg" class="st-portfolio st-zoom st-lightbox-item">
+                
+                <div class="st-portfolio-img st-zoom-in">
+                  <a href="https://drive.google.com/file/d/1NaIGZax250yuvYh7Rkd0XeqEZDzvDFZ_/view" target="_blank">
+                    <img src="assets/demo/vcall.png" alt="Video Thumbnail" style="width:300px; height: 370px; ">
+                  </a>
+                </div>
+
+                <div class="st-overlay">
+                  <h5>Mobile App : VCALL </h5>
+                </div>  
+                <!-- Hidden message -->
+                <div class="hover-message">
+                   Demo Mobile App : VCALL
+                </div>
+
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item" style="position: relative;">
+              <a href="assets/demo/nogoal.png" class="st-portfolio st-zoom st-lightbox-item">
+                <div class="st-portfolio-img st-zoom-in">
+                  <a href="https://drive.google.com/file/d/1IHtVIjPGZhe4acu1WkH2krOV2VYW7Tje/view" target="_blank">
+                    <img src="assets/demo/nogoal.png" alt="Video Thumbnail" style="width:300px; height: 370px; ">
+                  </a>
+                </div>
+                <div class="st-overlay">
+                  <h5>2D Game subways</h5>
+                </div>
+                <!-- Hidden message -->
+                <div class="hover-message">
+                   Demo 2D Game subways
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item" style="position: relative;">
               <a href="assets/demo/platfrom.png" class="st-portfolio st-zoom st-lightbox-item">
                 <div class="st-portfolio-img st-zoom-in">
                   <a href="https://drive.google.com/file/d/1BQbYn7gTseGl1rMvOBrbJS6LROBVsimF/view" target="_blank">
                     <img src="assets/demo/platfrom.png" alt="Video Thumbnail" style="width:300px; height: 370px; ">
                   </a>
                 </div>
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-plus-circle"></i>
+                <div class="st-overlay">
                   <h5>Mini Games Platforms</h5>
-                  <p>Design / Marketing</p>
                 </div>
+                <!-- Hidden message -->
+                <div class="hover-message">
+                   Demo Mini Games Platformss
+                </div>
+
               </a>
             </div>
           </div>
